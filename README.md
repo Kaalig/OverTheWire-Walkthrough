@@ -166,6 +166,9 @@ I specifically used ``find /`` to search in all of the files the device has sinc
 
 Fortunately I did find it pretty easily ! let's **cat** it !
 
+![bandit6_2](https://github.com/user-attachments/assets/011713ed-27a5-47bb-845a-8705ef4bcfbc)
+
+
 
 
 
