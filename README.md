@@ -61,35 +61,87 @@ IMAGE BANDIT1_1
 Yessir ! Let's move on !
 
 ### Level 2 - 3
+Level Goal
+The password for the next level is stored in a file called spaces in this filename located in the home directory
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+In this level, we need to find a file and open it. Let's do that.
+I will **ls** then open the file using **cat** but as soon as I do it, it gave me this :
+IMAGE BANDIT2
+
+Ok so this is why you don't name a file that has spaces without using underscore or some other stuff. Got it. Let's find how to open it.
+
+In this article (https://linuxhandbook.com/filename-spaces-linux/) we can see that by wrapping the whole name, you can open it (Example : cat "spaces in this filename") . Let's see if it work :
+IMAGE BANDIT2_1
+
+Great ! That was easier than I thought ! There was also another way to open it, using backslashes (Example : cat spaces\ in\ this\ filename) but I find it harder to type. Still good to know.
+
+
+
 ### Level 3 - 4
+
+Level Goal
+The password for the next level is stored in a hidden file in the inhere directory.
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+An hidden file ? I have the perfect command for that : **ls -la** .
+IMAGE BANDIT3
+
+the -a argument in ls show us the hidden file in a directory. It is useful and should be learned by everyone. Anyway, let's **cat** this file :
+
+Yes sir ! Let's see what's next.
+
+
 ### Level 4 - 5
-### Level 3 - 6
-### Level 3 - 7
-### Level 3 - 8
-### Level 3 - 9
-### Level 3 - 10
-### Level 3 - 11
-### Level 3 - 12
-### Level 3 - 13
-### Level 3 - 14
-### Level 3 - 15
-### Level 3 - 16
-### Level 3 - 17
-### Level 3 - 18
-### Level 3 - 19
-### Level 3 - 20
-### Level 3 - 21
-### Level 3 - 22
-### Level 3 - 23
-### Level 3 - 24
-### Level 3 - 25
-### Level 3 - 26
-### Level 3 - 27
-### Level 3 - 28
-### Level 3 - 29
-### Level 3 - 30
-### Level 3 - 31
-### Level 3 - 32
-### Level 3 - 33
-### Level 3 - 34
+Level Goal
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+Alright. So in this level I have to find the only human-readable file in the directory. I wanted to know, first, if you could manually **cat** every file, which you can do. I find the password like that ! :
+IMAGE BANDIT4
+
+However, I do not think it was intended to be the primary source of finding, so I made some research in order to know how to do it using the command **find** . After few minutes, I came to something : ```find /path/to/search -type f -exec file {} + | grep ": text"```
+In this one, find . means it search from the directory we are, -type f means that it searchs for files. -exec file {} + open every file during the search. grep text is a command that search for specific name (here, only text so human readable file).
+Let's try it :
+IMAGE BANDIT4_1
+
+Indeed it worked ! 
+
+
+
+### Level 5 - 6
+### Level 6 - 7
+### Level 7 - 8
+### Level 8 - 9
+### Level 9 - 10
+### Level 10 - 11
+### Level 11 - 12
+### Level 12 - 13
+### Level 13 - 14
+### Level 14 - 15
+### Level 15 - 16
+### Level 16 - 17
+### Level 17 - 18
+### Level 18 - 19
+### Level 19 - 20
+### Level 20 - 21
+### Level 21 - 22
+### Level 22 - 23
+### Level 23 - 24
+### Level 24 - 25
+### Level 25 - 26
+### Level 26 - 27
+### Level 27 - 28
+### Level 28 - 29
+### Level 29 - 30
+### Level 30 - 31
+### Level 31 - 32
+### Level 32 - 33
+### Level 33 - 34
 
