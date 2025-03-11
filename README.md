@@ -13,7 +13,7 @@ Level Goal :
 So first of all, we will be using SSH in order to connect to the host on port 2220. Here's the command line :
 IMAGE BANDIT0
 
-In order to connect to a SSH we use this topology : username@IP_ADRESS or username@DOMAIN_NAME. Since they gave us the username, domain name and also the password, we can confidently write it like this : bandit0@bandit.labs.overthewire.org . If you don't specify the port, it will automatically try to connect to the 22 port and it will give us an error. This is why -p 2220 is important. Lastly, don't forget to invoke sudo.
+In order to connect to a SSH we use this topology : username@IP_ADRESS or username@DOMAIN_NAME. Since they gave us the username, domain name and also the password, we can confidently write it like this : bandit0@bandit.labs.overthewire.org . If you don't specify the port, it will automatically try to connect to the port 22 and it will give us an error. This is why -p 2220 is important. Lastly, don't forget to invoke sudo.
 
 If it worked, you should see this. Simply type the password they gave us : 
 IMAGE BANDIT0_1
@@ -21,9 +21,21 @@ IMAGE BANDIT0_1
 This will lead us to be on the bandit0 machine, which should be like this :
 IMAGE BANDIT0_2
 
-Bravo ! You completed your first bandit level ! 
+We have now access to the bandit0 machine, let's **ls** in order to discover what is in there. 
+IMAGE bandit0_3
+Bingo ! Now we just have to open this file using **cat** 
+IMAGE BANDIT0_4
+
+Bravo ! You completed your first bandit level ! Don't forget to **save** the **password** in your password file.
 
 ### Level 0 - 1
+Level Goal
+The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
+
+Commands you may need to solve this level
+ls , cd , cat , file , du , find
+
+### Level 1 - 2
 
 Level Goal :
 *The password for the next level is stored in a file called - located in the home directory*
@@ -35,9 +47,7 @@ Helpful Reading Material
 *Google Search for “dashed filename”*
 *Advanced Bash-scripting Guide - Chapter 3 - Special Characters*
 
-So,
-
-### Level 1 - 2
+So, in this one
 ### Level 2 - 3
 ### Level 3 - 4
 ### Level 4 - 5
