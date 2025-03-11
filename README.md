@@ -138,7 +138,14 @@ not executable
 Commands you may need to solve this level
 ls , cd , cat , file , du , find
 
-Alright, so this level is quite similar to the level 4-5 as we had to find a human readable file. Now we also need it to be not executable and 1033 bytes in size. The 1033 bytes can be formulate like this ``-size 1033c`` , not executable is written like that : ``! -executable`` so we should get something like that : ``find . -type f -size 1033c | ! -executable | grep "text" ``
+Alright, so this level is quite similar to the level 4-5 as we had to find a human readable file. Now we also need it to be not executable and 1033 bytes in size. The 1033 bytes can be formulate like this ``-size 1033c`` , not executable is written like that : ``! -executable`` so we should get something like that : ``find . -type f -size 1033c ! -executable -exec file {} +  | grep "text" `` . Let's try it !
+![bandit5](https://github.com/user-attachments/assets/3a3f25d0-e879-44a7-af09-7cd689faf2e2)
+
+Ok, it seems like it did worked. We have a file that is human readable (ASCII or UTC text), has 1033 bytes but is not a executable file. Let's **cat** this :
+
+![bandit5_1](https://github.com/user-attachments/assets/bfd14b94-52b0-4d40-9dab-bfec1105191f)
+
+
 
 ### Level 6 - 7
 The password for the next level is stored somewhere on the server and has all of the following properties:
