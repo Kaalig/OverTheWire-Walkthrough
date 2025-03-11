@@ -9,18 +9,19 @@ Also, don't forget to create a password file containing all the passwords you fo
 ### Level 0
 Level Goal :
 *The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.*
-![bandit0](https://github.com/user-attachments/assets/6375267d-5cbd-47b7-87a9-ac3aa5666f6a)
 
 So first of all, we will be using SSH in order to connect to the host on port 2220. Here's the command line :
-IMAGE BANDIT0
+![bandit0](https://github.com/user-attachments/assets/6375267d-5cbd-47b7-87a9-ac3aa5666f6a)
 
 In order to connect to a SSH we use this topology : username@IP_ADRESS or username@DOMAIN_NAME. Since they gave us the username, domain name and also the password, we can confidently write it like this : bandit0@bandit.labs.overthewire.org . If you don't specify the port, it will automatically try to connect to the port 22 and it will give us an error. This is why -p 2220 is important. Lastly, don't forget to invoke sudo.
 
 If it worked, you should see this. Simply type the password they gave us : 
-IMAGE BANDIT0_1
+![bandit0_1](https://github.com/user-attachments/assets/fc03a610-4c7a-4371-bbc4-7c793ca4fc86)
+
 
 This will lead us to be on the bandit0 machine, which should be like this :
-IMAGE BANDIT0_2
+![bandit0_2](https://github.com/user-attachments/assets/8114d81e-9426-45f7-8ae5-e60868272aa8)
+
 
 
 ### Level 0 - 1
@@ -31,9 +32,11 @@ Commands you may need to solve this level
 ls , cd , cat , file , du , find
 
 We have now access to the bandit0 machine, let's **ls** in order to discover what is in there. **ls** can let us see the content of a directory.
-IMAGE bandit0_3
+![bandit0_3](https://github.com/user-attachments/assets/b4f322f4-3130-4aee-9902-3c4a645504a0)
+
 Bingo ! Now we just have to open this file using **cat**  . **cat** let us print the file in a standard output.
-IMAGE BANDIT0_4
+![bandit0_4](https://github.com/user-attachments/assets/f231de29-4f69-432f-bb37-f5df93691621)
+
 
 Bravo ! This one was fast and easy but still ! You completed your first bandit level ! Don't forget to **save** the **password** in your password file also.
 
@@ -54,10 +57,12 @@ Helpful Reading Material
 Ok, so first of all, if you have trouble login in to this level, don't forget that the SSH username is now bandit1 for the level 1-2, and bandit2 for the level 2-3, and so on..
 
 Now, we need to  find and open the "-" directory. So we find the "-" directory by using **ls**, then we use **cat** again but we have a problem when we do that :
-IMAGE BANDIT1
+![bandit1](https://github.com/user-attachments/assets/9721cbe6-6bcb-41ea-893b-9d393e244b8b)
+
 
 Indeed, bash doesn't understand that we want to see the file since it is called like that. A little trick that we can do is to put "./" before the directory name so it can get understand by BASH just like that :
-IMAGE BANDIT1_1
+![bandit 1_1](https://github.com/user-attachments/assets/89cbec04-51ce-4e9a-b8a9-502d2fe05008)
+
 
 Yessir ! Let's move on !
 
@@ -70,12 +75,14 @@ ls , cd , cat , file , du , find
 
 In this level, we need to find a file and open it. Let's do that.
 I will **ls** then open the file using **cat** but as soon as I do it, it gave me this :
-IMAGE BANDIT2
+![bandit2](https://github.com/user-attachments/assets/da9d486d-fa1a-48d1-9367-45d838dc5755)
+
 
 Ok so this is why you don't name a file that has spaces without using underscore or some other stuff. Got it. Let's find how to open it.
 
 In this article (https://linuxhandbook.com/filename-spaces-linux/) we can see that by wrapping the whole name, you can open it (Example : cat "spaces in this filename") . Let's see if it work :
-IMAGE BANDIT2_1
+![bandit2_1](https://github.com/user-attachments/assets/ac150399-82c8-4110-aaa8-be65bb6002f4)
+
 
 Great ! That was easier than I thought ! There was also another way to open it, using backslashes (Example : cat spaces\ in\ this\ filename) but I find it harder to type. Still good to know.
 
@@ -90,9 +97,12 @@ Commands you may need to solve this level
 ls , cd , cat , file , du , find
 
 An hidden file ? I have the perfect command for that : **ls -la** .
-IMAGE BANDIT3
+![bandit3](https://github.com/user-attachments/assets/93e5737d-ebc2-4b4f-9627-b7f8c337e07c)
+
 
 the -a argument in ls show us the hidden file in a directory. It is useful and should be learned by everyone. Anyway, let's **cat** this file :
+![bandit3_1](https://github.com/user-attachments/assets/162f1d8e-6e00-44af-bf9e-528a7ad3406b)
+
 
 Yes sir ! Let's see what's next.
 
@@ -105,12 +115,14 @@ Commands you may need to solve this level
 ls , cd , cat , file , du , find
 
 Alright. So in this level I have to find the only human-readable file in the directory. I wanted to know, first, if you could manually **cat** every file, which you can do. I find the password like that ! :
-IMAGE BANDIT4
+![bandit4](https://github.com/user-attachments/assets/2e5ddaf4-6e5d-4e58-a238-e1949ac40e87)
+
 
 However, I do not think it was intended to be the primary source of finding, so I made some research in order to know how to do it using the command **find** . After few minutes, I came to something : ```find /path/to/search -type f -exec file {} + | grep ": text"```
 In this one, find . means it search from the directory we are, -type f means that it searchs for files. -exec file {} + open every file during the search. grep text is a command that search for specific name (here, only text so human readable file).
 Let's try it :
-IMAGE BANDIT4_1
+![bandit4_1](https://github.com/user-attachments/assets/a6007787-eee3-4528-b42a-23c16fb48417)
+
 
 Indeed it worked ! 
 
