@@ -148,13 +148,27 @@ Ok, it seems like it did worked. We have a file that is human readable (ASCII or
 
 
 ### Level 6 - 7
-The password for the next level is stored somewhere on the server and has all of the following properties:
+The password for the next level is stored **somewhere on the server** and has all of the following properties:
 
 owned by user bandit7
 owned by group bandit6
 33 bytes in size
 Commands you may need to solve this level
 ls , cd , cat , file , du , find , grep
+
+Okay, so this is something I don't know. Im suspecting that the fact they bold **somewhere on the server** is that it can be related to a path or a file where the server should be. We can find it by specifying the group and the user + his size.  I think I'll go with what I learned in those precedent levels using ``find`` such as : ``find / -type f -group bandit6 -user bandit7 -size 33c -exec file {}+``
+![bandit6](https://github.com/user-attachments/assets/5b3661f4-7db6-420c-82ae-9e386eadcb8f)
+
+I specifically used ``find /`` to search in all of the files the device has since I wasn't really sure where the server files were. Also if it returned more than one query, I would've probably change my find method !
+
+![bandit6_1](https://github.com/user-attachments/assets/465cc43b-75d5-4d5f-98e5-d8e1dd045dcc)
+
+
+Fortunately I did find it pretty easily ! let's **cat** it !
+
+
+
+
 
 
 ### Level 7 - 8
