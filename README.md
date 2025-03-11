@@ -25,11 +25,11 @@ This will lead us to be on the bandit0 machine, which should be like this :
 
 
 ### Level 0 - 1
-**Level Goal
-The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.**
+*Level Goal
+The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.*
 
-**Commands you may need to solve this level
-ls , cd , cat , file , du , find**
+*Commands you may need to solve this level :*
+**ls , cd , cat , file , du , find**
 
 We have now access to the bandit0 machine, let's **ls** in order to discover what is in there. **ls** can let us see the content of a directory.
 ![bandit0_3](https://github.com/user-attachments/assets/b4f322f4-3130-4aee-9902-3c4a645504a0)
@@ -44,15 +44,12 @@ Bravo ! This one was fast and easy but still ! You completed your first bandit l
 
 ### Level 1 - 2
 
-Level Goal :
-*The password for the next level is stored in a file called - located in the home directory*
+*Level Goal :
+The password for the next level is stored in a file called - located in the home directory*
 
 Commands you may need to solve this level :
 **ls , cd , cat , file , du , find**
 
-Helpful Reading Material
-*Google Search for “dashed filename”*
-*Advanced Bash-scripting Guide - Chapter 3 - Special Characters*
 
 Ok, so first of all, if you have trouble login in to this level, don't forget that the SSH username is now bandit1 for the level 1-2, and bandit2 for the level 2-3, and so on..
 
@@ -67,11 +64,11 @@ Indeed, bash doesn't understand that we want to see the file since it is called 
 Yessir ! Let's move on !
 
 ### Level 2 - 3
-Level Goal
-The password for the next level is stored in a file called spaces in this filename located in the home directory
+*Level Goal
+The password for the next level is stored in a file called spaces in this filename located in the home directory*
 
 Commands you may need to solve this level
-ls , cd , cat , file , du , find
+**ls , cd , cat , file , du , find**
 
 In this level, we need to find a file and open it. Let's do that.
 I will **ls** then open the file using **cat** but as soon as I do it, it gave me this :
@@ -90,13 +87,13 @@ Great ! That was easier than I thought ! There was also another way to open it, 
 
 ### Level 3 - 4
 
-Level Goal
-The password for the next level is stored in a hidden file in the inhere directory.
+*Level Goal
+The password for the next level is stored in a hidden file in the inhere directory.*
 
 Commands you may need to solve this level
-ls , cd , cat , file , du , find
+**ls , cd , cat , file , du , find**
 
-An hidden file ? I have the perfect command for that : **ls -la** .
+An hidden file ? I have the perfect command for that : ``ls -la`` .
 ![bandit3](https://github.com/user-attachments/assets/93e5737d-ebc2-4b4f-9627-b7f8c337e07c)
 
 
@@ -108,11 +105,11 @@ Yes sir ! Let's see what's next.
 
 
 ### Level 4 - 5
-Level Goal
-The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+*Level Goal
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.*
 
 Commands you may need to solve this level
-ls , cd , cat , file , du , find
+**ls , cd , cat , file , du , find**
 
 Alright. So in this level I have to find the only human-readable file in the directory. I wanted to know, first, if you could manually **cat** every file, which you can do. I find the password like that ! :
 ![bandit4](https://github.com/user-attachments/assets/2e5ddaf4-6e5d-4e58-a238-e1949ac40e87)
