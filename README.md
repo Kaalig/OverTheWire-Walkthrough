@@ -13,7 +13,7 @@ Level Goal :
 So first of all, we will be using SSH in order to connect to the host on port 2220. Here's the command line :
 ![bandit0](https://github.com/user-attachments/assets/6375267d-5cbd-47b7-87a9-ac3aa5666f6a)
 
-In order to connect to a SSH we use this topology : username@IP_ADRESS or username@DOMAIN_NAME. Since they gave us the username, domain name and also the password, we can confidently write it like this : bandit0@bandit.labs.overthewire.org . If you don't specify the port, it will automatically try to connect to the port 22 and it will give us an error. This is why -p 2220 is important. Lastly, don't forget to invoke sudo.
+In order to connect to a SSH we use this topology : ``username@IP_ADRESS`` or ``username@DOMAIN_NAME``. Since they gave us the username, domain name and also the password, we can confidently write it like this : ``bandit0@bandit.labs.overthewire.org`` . If you don't specify the port, it will automatically try to connect to the port 22 and it will give us an error. This is why ``-p 2220`` is important. Lastly, don't forget to invoke ``sudo``.
 
 If it worked, you should see this. Simply type the password they gave us : 
 ![bandit0_1](https://github.com/user-attachments/assets/fc03a610-4c7a-4371-bbc4-7c793ca4fc86)
@@ -22,6 +22,7 @@ If it worked, you should see this. Simply type the password they gave us :
 This will lead us to be on the bandit0 machine, which should be like this :
 ![bandit0_2](https://github.com/user-attachments/assets/8114d81e-9426-45f7-8ae5-e60868272aa8)
 
+Bravo ! This one was fast and easy but still ! You completed your first bandit level ! Don't forget to **save** the **password** in your password file also.
 
 
 ### Level 0 - 1
@@ -31,16 +32,14 @@ The password for the next level is stored in a file called readme located in the
 *Commands you may need to solve this level :*
 **ls , cd , cat , file , du , find**
 
+*Note : You wouldn't be able to hop from level to level using SSH from another SSH session. You need to connect to a level using your own root machine and not the bandit one !!*
+
 We have now access to the bandit0 machine, let's **ls** in order to discover what is in there. **ls** can let us see the content of a directory.
 ![bandit0_3](https://github.com/user-attachments/assets/b4f322f4-3130-4aee-9902-3c4a645504a0)
 
 Bingo ! Now we just have to open this file using **cat**  . **cat** let us print the file in a standard output.
 ![bandit0_4](https://github.com/user-attachments/assets/f231de29-4f69-432f-bb37-f5df93691621)
 
-
-Bravo ! This one was fast and easy but still ! You completed your first bandit level ! Don't forget to **save** the **password** in your password file also.
-
-*Note : You wouldn't be able to hop from level to level using SSH from another SSH session. You need to connect to a level using your own root machine and not the bandit one !!*
 
 ### Level 1 - 2
 
