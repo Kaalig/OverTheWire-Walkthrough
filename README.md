@@ -53,11 +53,11 @@ Commands you may need to solve this level :
 
 Ok, so first of all, if you have trouble login in to this level, don't forget that the SSH username is now bandit1 for the level 1-2, and bandit2 for the level 2-3, and so on..
 
-Now, we need to  find and open the "-" directory. So we find the "-" directory by using **ls**, then we use **cat** again but we have a problem when we do that :
+Now, we need to  find and open the "-" directory. So we find the "-" directory by using ``ls``, then we use ``cat`` again but we have a problem when we do that :
 ![bandit1](https://github.com/user-attachments/assets/9721cbe6-6bcb-41ea-893b-9d393e244b8b)
 
 
-Indeed, bash doesn't understand that we want to see the file since it is called like that. A little trick that we can do is to put "./" before the directory name so it can get understand by BASH just like that :
+Indeed, bash doesn't understand that we want to see the file since it is called like that. A little trick that we can do is to put ``./`` before the directory name so it can get understand by BASH just like that :
 ![bandit 1_1](https://github.com/user-attachments/assets/89cbec04-51ce-4e9a-b8a9-502d2fe05008)
 
 
@@ -71,7 +71,7 @@ Commands you may need to solve this level
 **ls , cd , cat , file , du , find**
 
 In this level, we need to find a file and open it. Let's do that.
-I will **ls** then open the file using **cat** but as soon as I do it, it gave me this :
+I will ``ls`` then open the file using ``cat`` but as soon as I do it, it gave me this :
 ![bandit2](https://github.com/user-attachments/assets/da9d486d-fa1a-48d1-9367-45d838dc5755)
 
 
