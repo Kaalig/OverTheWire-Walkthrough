@@ -138,6 +138,8 @@ not executable
 Commands you may need to solve this level
 ls , cd , cat , file , du , find
 
+Alright, so this level is quite similar to the level 4-5 as we had to find a human readable file. Now we also need it to be not executable and 1033 bytes in size. The 1033 bytes can be formulate like this ``-size 1033c`` , not executable is written like that : ``! -executable`` so we should get something like that : ``find . -type f -size 1033c | ! -executable | grep "text" ``
+
 ### Level 6 - 7
 The password for the next level is stored somewhere on the server and has all of the following properties:
 
