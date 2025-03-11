@@ -97,7 +97,7 @@ An hidden file ? I have the perfect command for that : ``ls -la`` .
 ![bandit3](https://github.com/user-attachments/assets/93e5737d-ebc2-4b4f-9627-b7f8c337e07c)
 
 
-the -a argument in ls show us the hidden file in a directory. It is useful and should be learned by everyone. Anyway, let's **cat** this file :
+the : ``-a`` argument in ls show us the hidden file in a directory. It is useful and should be learned by everyone. Anyway, let's ``cat`` this file :
 ![bandit3_1](https://github.com/user-attachments/assets/162f1d8e-6e00-44af-bf9e-528a7ad3406b)
 
 
@@ -115,8 +115,8 @@ Alright. So in this level I have to find the only human-readable file in the dir
 ![bandit4](https://github.com/user-attachments/assets/2e5ddaf4-6e5d-4e58-a238-e1949ac40e87)
 
 
-However, I do not think it was intended to be the primary source of finding, so I made some research in order to know how to do it using the command **find** . After few minutes, I came to something : ```find /path/to/search -type f -exec file {} + | grep ": text"```
-In this one, find . means it search from the directory we are, -type f means that it searchs for files. -exec file {} + open every file during the search. grep text is a command that search for specific name (here, only text so human readable file).
+However, I do not think it was intended to be the primary source of finding, so I made some research in order to know how to do it using the command ``find`` . After few minutes, I came to something : ```find /path/to/search -type f -exec file {} + | grep ": text"```
+In this one, ``find .`` means it search from the directory we are, ``-type f`` means that it searchs for files. ``-exec file {} +`` open every file during the search.`` grep text`` is a command that search for specific name (here, only text so human readable file).
 Let's try it :
 ![bandit4_1](https://github.com/user-attachments/assets/a6007787-eee3-4528-b42a-23c16fb48417)
 
