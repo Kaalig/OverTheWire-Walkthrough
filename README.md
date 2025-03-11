@@ -21,12 +21,6 @@ IMAGE BANDIT0_1
 This will lead us to be on the bandit0 machine, which should be like this :
 IMAGE BANDIT0_2
 
-We have now access to the bandit0 machine, let's **ls** in order to discover what is in there. 
-IMAGE bandit0_3
-Bingo ! Now we just have to open this file using **cat** 
-IMAGE BANDIT0_4
-
-Bravo ! You completed your first bandit level ! Don't forget to **save** the **password** in your password file.
 
 ### Level 0 - 1
 Level Goal
@@ -34,6 +28,15 @@ The password for the next level is stored in a file called readme located in the
 
 Commands you may need to solve this level
 ls , cd , cat , file , du , find
+
+We have now access to the bandit0 machine, let's **ls** in order to discover what is in there. **ls** can let us see the content of a directory.
+IMAGE bandit0_3
+Bingo ! Now we just have to open this file using **cat**  . **cat** let us print the file in a standard output.
+IMAGE BANDIT0_4
+
+Bravo ! This one was fast and easy but still ! You completed your first bandit level ! Don't forget to **save** the **password** in your password file also.
+
+*Note : You wouldn't be able to hop from level to level using SSH from another SSH session. You need to connect to a level using your own root machine and not the bandit one !!*
 
 ### Level 1 - 2
 
@@ -47,7 +50,16 @@ Helpful Reading Material
 *Google Search for “dashed filename”*
 *Advanced Bash-scripting Guide - Chapter 3 - Special Characters*
 
-So, in this one
+Ok, so first of all, if you have trouble login in to this level, don't forget that the SSH username is now bandit1 for the level 1-2, and bandit2 for the level 2-3, and so on..
+
+Now, we need to  find and open the "-" directory. So we find the "-" directory by using **ls**, then we use **cat** again but we have a problem when we do that :
+IMAGE BANDIT1
+
+Indeed, bash doesn't understand that we want to see the file since it is called like that. A little trick that we can do is to put "./" before the directory name so it can get understand by BASH just like that :
+IMAGE BANDIT1_1
+
+Yessir ! Let's move on !
+
 ### Level 2 - 3
 ### Level 3 - 4
 ### Level 4 - 5
