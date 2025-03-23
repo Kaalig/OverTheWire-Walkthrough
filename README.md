@@ -117,7 +117,7 @@ Alright. So in this level I have to find the only human-readable file in the dir
 ![bandit4](https://github.com/user-attachments/assets/2e5ddaf4-6e5d-4e58-a238-e1949ac40e87)
 
 
-However, I do not think it was intended to be the primary source of finding, so I made some research in order to know how to do it using the command ``find`` . After few minutes, I came to something : ```find /path/to/search -type f -exec file {} + | grep ": text"```
+However, I do not think it was intended to be the primary source of finding, so I made some research in order to know how to do it using the command ``find`` . After few minutes, I came to something : ```find /path/to/search -type f -exec file {} + | grep "text"```
 In this one, ``find .`` means it search from the directory we are, ``-type f`` means that it searchs for files. ``-exec file {} +`` open every file during the search.`` grep text`` is a command that search for specific name (here, only text so human readable file).
 Let's try it :
 
